@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Task Manager</h2>
+    <div>
+        <span id="username"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="dashboard">
+
+    
+    <div class="cards">
+        <div class="card small"><h3>Projects</h3><p id="projectCount"></p></div>
+        <div class="card small"><h3>Total Tasks</h3><p id="total"></p></div>
+        <div class="card small"><h3>Done</h3><p id="done"></p></div>
+        <div class="card small"><h3>Todo</h3><p id="todo"></p></div>
+        <div class="card small"><h3>In Progress</h3><p id="inProgress"></p></div>
+        <div class="card small"><h3>Overdue</h3><p id="overdue"></p></div>
+    </div>
+
+    
+<div id="adminSection">
+
+    <div class="card">
+        <h3>Create Project</h3>
+        <input id="projectTitle" placeholder="Title">
+        <input id="projectDesc" placeholder="Description">
+        <input id="adminId" placeholder="Admin ID">
+        <button onclick="createProject()">Create</button>
+    </div>
+
+    <div class="card">
+        <h3>Assign Task</h3>
+
+        <select id="projectSelect"></select>
+        <select id="userSelect"></select>
+
+        <input id="taskTitle" placeholder="Title">
+        <input id="taskDesc" placeholder="Description">
+        <input type="date" id="taskDueDate">
+        <button onclick="createTask()">Assign Task</button>
+    </div>
+
+</div>
+    
+    <div class="card">
+        <h3>Tasks</h3>
+        <button onclick="loadTasks()">Refresh</button>
+        <ul id="taskList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

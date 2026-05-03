@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>Signup</h2>
+
+        <input id="name" placeholder="Name">
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+
+        <select id="role">
+            <!-- <option>ADMIN</option> -->
+            <option>MEMBER</option>
+        </select>
+
+        <button onclick="signup()">Signup</button>
+        <button onclick="goHome()">Back</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
